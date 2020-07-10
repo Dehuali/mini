@@ -13,8 +13,7 @@ exports.initializer = (context, callback) => {
 */
 
 exports.handler = (req, resp, context) => {
-    console.log('hello world');
-
+    resp.setHeader("content-type", "application/json");
     var params = {
         path: req.path,
         queries: req.queries,
